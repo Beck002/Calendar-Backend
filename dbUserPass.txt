@@ -1,0 +1,4 @@
+//mongoDb 
+
+user: beck_mern
+pass: w92vtyVubtPPzxKa
