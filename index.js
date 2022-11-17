@@ -10,8 +10,6 @@ const app = express();
 // Database
 dbConnection(); 
 
-// CORS 
-
 // Directorio publico
 app.use( express.static('public'));
 
@@ -25,6 +23,6 @@ app.use('/api/events', require('./Routes/events.js'));
 // Escuchar Peticiones
 app.listen( process.env.PORT, () => {
 
-    console.log('servidor puerto 4000');
+    console.log(`corriendo en el puerto: ${process.env.PORT}`);
 
 });
