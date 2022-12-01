@@ -1,12 +1,12 @@
 const express = require('express');
+const cors    = require('cors');
 const { dbConnection } = require('./database/config');
 require('dotenv').config();
-
-
 
 // Servidor 
 const app = express();
 
+app.use(cors());
 // Database
 dbConnection(); 
 
@@ -14,6 +14,7 @@ dbConnection();
 app.use( express.static('public'));
 
 // Lectura y parseo del body
+
 app.use( express.json() );
 
 // Rutas

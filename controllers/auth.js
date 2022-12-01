@@ -8,7 +8,7 @@ const { validationResult } = require('express-validator');
 
 const crearUsuario = async ( req, res = express.response) => {
 
-    const { email, password} = req.body; 
+    const { email, password } = req.body; 
 
     try {  
 
@@ -80,6 +80,7 @@ const loginUsuario   = async ( req, res = express.response ) => {
 
         res.status(200).json({ 
             ok: true,
+            name: usuario.name,
             uid: usuario.id,
             email: usuario.email,
             token
