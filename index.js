@@ -21,6 +21,10 @@ app.use( express.json() );
 app.use('/api/auth', require('./Routes/auth'));
 app.use('/api/events', require('./Routes/events.js'));
 
+app.get('*', ( req, res  )=> {
+    res.sendFile( __dirname + '/public/index.html')
+})
+
 // Escuchar Peticiones
 app.listen( process.env.PORT, () => {
 
