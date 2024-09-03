@@ -21,9 +21,6 @@ const generarJwt = ( uid, name ) =>{
         })
 
     })
-
-
-
 }
 
 

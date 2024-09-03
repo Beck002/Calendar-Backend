@@ -51,7 +51,7 @@ const crearUsuario = async ( req, res = express.response) => {
 
 };
 
-const loginUsuario   = async ( req, res = express.response ) => {
+const loginUsuario = async ( req, res = express.response ) => {
 
     const { email, password } = req.body;
 
